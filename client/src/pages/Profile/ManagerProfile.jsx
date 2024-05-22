@@ -11,7 +11,7 @@ import {
 import Cookies from "universal-cookie";
 
 export default function ManagerProfile() {
-  const host = "http://localhost:3001";
+  const host = import.meta.env.VITE_BACKEND_URI;
   const { currentUser } = useSelector((state) => state.user);
   const cookies = new Cookies();
   const dispatch = useDispatch();
